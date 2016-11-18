@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Configuration status="TRACE">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{DATE} [%p] %c{1}: %m%n"/>
+        </Console>
+        <File name="infoFile" fileName="../logs/employee_photos.log" >
+            <PatternLayout pattern="%d{DATE} [%p] %c{1}: %m%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <Appender-Ref ref="Console"/>
+            <Appender-Ref ref="infoFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
